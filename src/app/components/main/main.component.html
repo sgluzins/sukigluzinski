@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+    <mat-sidenav position="end" mode="side" #sidenav>
+    <mat-tab-group>
+      <mat-tab label="details">
+        <!-- <p>Name: {{currentImg.name}}</p>
+        <p>Size: {{currentImg.size}}</p>
+        <p>Price: {{currentImg.price}}</p> -->
+        <button mat-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+      </mat-tab>
+      <mat-tab label="feed">
+        hi
+      </mat-tab>
+    </mat-tab-group>
+    </mat-sidenav>
+
+    <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile *ngFor="let img of imgs" [rowspan]="img.rows">
+            <!-- {{img.title}} -->
+            <img src="assets/{{img.title}}.jpg" alt="art piece | {{img.title}}">
+            <mat-grid-tile-footer>
+                <h3 mat-line>{{img.title}}</h3>
+                <span mat-line>{{img.price}}</span>
+                <button mat-icon-button (click)="showArt(img)">
+                    <mat-icon>info</mat-icon>
+                </button>
+            </mat-grid-tile-footer>
+        </mat-grid-tile>
+    </mat-grid-list>
+  </mat-sidenav-container>
