@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 
 @Component({
@@ -15,12 +15,12 @@ export class MainComponent implements OnInit {
     {rows: 1, title: "IMG_0007", size: "30x35", price: "$250"},
     {rows: 1, title: "IMG_0008", size: "30x30", price: "$300"},
   ]
-  @Output() navToggle = new EventEmitter<boolean>();
+  @ViewChild('sidenav') sidenav: MatSidenav;
   currentImg = {};
 
   showArt(img) {
     this.currentImg = img;
-    this.navToggle.emit(true);
+    this.sidenav.open();
   }
 
   ngOnInit() {

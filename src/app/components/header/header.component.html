@@ -1,6 +1,16 @@
 <mat-toolbar color="primary">
-    <span><mat-icon class="icon-20">favorite border</mat-icon></span>
-    <h1>
+    <span>
+      <mat-icon class="icon-20">favorite border</mat-icon>
       {{title}}
-    </h1>
+    </span>
+      <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
   </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>home</button>
+    <button mat-menu-item>about</button>
+    <button mat-menu-item>resume</button>
+    <button mat-menu-item>gallery</button>
+    <button mat-menu-item>contact</button>
+  </mat-menu>
