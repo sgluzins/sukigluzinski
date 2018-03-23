@@ -9,11 +9,11 @@ import { MatSidenav } from '@angular/material';
 export class MainComponent implements OnInit {
 
   imgs = [
-    {rows: 2, title: "IMG_0004", size: "30x30", price: "$400"},
-    {rows: 1, title: "IMG_0005", size: "30x30", price: "$600"},
-    {rows: 1, title: "IMG_0006", size: "35x30", price: "$500"},
-    {rows: 1, title: "IMG_0007", size: "30x35", price: "$250"},
-    {rows: 1, title: "IMG_0008", size: "30x30", price: "$300"},
+    {rows: 2, id: "IMG_0004", title:"roses are red", size: "30x30", price: "$400"},
+    {rows: 1, id: "IMG_0005", title:"pink purple", size: "30x30", price: "$600"},
+    {rows: 1, id: "IMG_0006", title:"yellow floral", size: "35x30", price: "$500"},
+    {rows: 1, id: "IMG_0007", title:"snow snow snow", size: "30x35", price: "$250"},
+    {rows: 1, id: "IMG_0008", title:"peaceful creek", size: "30x30", price: "$300"},
   ]
   @ViewChild('sidenav') sidenav: MatSidenav;
   currentImg = {};
