@@ -2,7 +2,7 @@ import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 
 @Component({
-  selector: 'app-main-component',
+  selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
