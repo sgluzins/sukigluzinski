@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">
-    <span>
-      <mat-icon class="icon-20">favorite border</mat-icon>
+    <span class="title">
+      <mat-icon class="icon-20" color="accent">palette</mat-icon>
       {{title}}
     </span>
       <button mat-icon-button [mat-menu-trigger-for]="menu">
-        <mat-icon>more_vert</mat-icon>
+        <mat-icon color="accent">more_vert</mat-icon>
       </button>
   </mat-toolbar>
   <mat-menu x-position="before" #menu="matMenu">
