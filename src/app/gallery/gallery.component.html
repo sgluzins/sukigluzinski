@@ -1,0 +1,9 @@
+<mat-grid-list [cols]="colNum | async" [rowHeight]="rowHeight" gutterSize="25px">
+    <mat-grid-tile *ngFor="let img of imgs" [rowspan]="img.rows">
+        <img src="assets/{{img.id}}.jpg" alt="art piece | {{img.title}}">
+        <!-- [style.width.%]="width" [style.height.%]="height" -->
+        <mat-grid-tile-header mat-button routerLink="">
+                    {{img.category}}
+        </mat-grid-tile-header>
+    </mat-grid-tile>
+</mat-grid-list>

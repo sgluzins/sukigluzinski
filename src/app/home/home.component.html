@@ -1,1 +1,39 @@
-<mat-card></mat-card>
+<!-- <mat-card class="textCard">
+    <h4>ART by: Suki</h4>
+    <p>specializing in watercolor, oil, & acrylic</p>
+</mat-card>
+<mat-card class="galleryCard">
+    <img src="/assets/IMG_0009.jpg">
+</mat-card>
+<mat-card>
+    <img src="/assets/IMG_0007.jpg">
+</mat-card>
+<mat-card class="textCard">
+    <p>My themes are as varied as my approach to most subjects, 
+    which range from snowy landscapes to barnyard chickens.
+    </p>
+</mat-card>
+<mat-card class="galleryCard">
+    
+</mat-card>
+<mat-card class="textCard">    
+    <p>
+    Most of my work is representational, in a style recognizable as my own 
+    with stark color, value contrasts, and bold elements 
+    that often seem to slide into abstraction.
+    </p>
+</mat-card> -->
+
+
+
+<mat-grid-list cols="3" rowHeight="200px" gutterSize="2px">
+    <mat-grid-tile *ngFor="let card of cards" [rowspan]="card.rows">
+        <mat-card *ngIf="!card.img" class="textCard">
+            {{card.content}}
+        </mat-card>
+        <mat-card *ngIf="card.img">
+            {{card.content}}
+            <img src="{{card.img}}" alt="art piece | {{card.title}}">
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

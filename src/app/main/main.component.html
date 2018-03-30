@@ -3,20 +3,19 @@
     <mat-sidenav position="end" mode="side" #sidenav>
     <mat-tab-group>
       <mat-tab label="details">
-        <p>Name: {{currentImg.title}}</p>
-        <p>Size: {{currentImg.size}}</p>
-        <p>Price: {{currentImg.price}}</p>
+        <p><b>Name:</b> {{currentImg.title}}</p>
+        <p><b>Size:</b> {{currentImg.size}}</p>
+        <p><b>Price:</b> {{currentImg.price}}</p>
         <button mat-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
       </mat-tab>
-      <mat-tab label="feed">
-        hi
+      <mat-tab label="other">
+        Other details about the photo can be included here.
       </mat-tab>
     </mat-tab-group>
     </mat-sidenav>
 
     <mat-grid-list cols="4" rowHeight="200px">
         <mat-grid-tile *ngFor="let img of imgs" [rowspan]="img.rows">
-            <!-- {{img.title}} -->
             <img src="assets/{{img.id}}.jpg" alt="art piece | {{img.title}}">
             <mat-grid-tile-footer>
                 <h3 mat-line>{{img.title}}</h3>
