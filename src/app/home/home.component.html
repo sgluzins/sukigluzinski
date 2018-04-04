@@ -26,7 +26,7 @@
 
 
 
-<mat-grid-list cols="3" rowHeight="200px" gutterSize="2px">
+<mat-grid-list cols="2" rowHeight="300px" gutterSize="2px">
     <mat-grid-tile *ngFor="let card of cards" [rowspan]="card.rows">
         <mat-card *ngIf="!card.img" class="textCard">
             {{card.content}}

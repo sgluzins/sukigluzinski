@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
-    <span class="title">
-      <mat-icon class="icon-20" color="accent">palette</mat-icon>
-      {{title}}
-    </span>
-      <button mat-icon-button [mat-menu-trigger-for]="menu">
-        <mat-icon color="accent">more_vert</mat-icon>
-      </button>
-  </mat-toolbar>
+  <span class="title">
+    <mat-icon class="icon-20" color="accent">palette</mat-icon>
+    {{title}}
+  </span>
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon color="accent">more_vert</mat-icon>
+    </button>
+</mat-toolbar>
   <mat-menu x-position="before" #menu="matMenu">
     <button mat-menu-item routerLink="">home</button>
     <button mat-menu-item routerLink="/about">about</button>

@@ -15,4 +15,8 @@ mat-toolbar {
     border-style: solid;
     border-color: white;
     border-width: 0 0 2px 0;
+    top: 0;
+
+    position: fixed;
+    z-index: 999;
 }

@@ -1,22 +1,19 @@
+.aboutContainer, p {
+    text-align: center;
+}
+
 img {
-    max-width: 400px;
     max-width: 400px;
 }
 
 mat-card { 
     max-width: 400px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin: 20px auto;
+    display: inline-block;
+    margin: 20px;
     position: center;
 }
 
 .about {
     background-color: #ce93d8; 
     color: #fff;
-}
-
-p {
-    text-align: center;
 }

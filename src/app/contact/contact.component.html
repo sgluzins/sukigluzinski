@@ -1,3 +1,40 @@
-<p>
-  contact works!
-</p>
+<mat-card class="contact">
+  <mat-card-content>
+    <h2>I would love to hear from you!</h2><span>
+      <mat-icon class="icon-20">favorite</mat-icon>
+    </span>
+    <p>
+      Please feel free to reach out with any questions, comments, or purchase inquiries.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <div class="contactForm" [@toggleState]="shouldToggle">
+    <mat-form-field>
+        <mat-label>name</mat-label>
+        <input matInput [(ngModel)]="contactEmail.name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>e-mail address</mat-label>
+      <input matInput [formControl]="email" [(ngModel)]="contactEmail.email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>subject</mat-label>
+        <input matInput [(ngModel)]="contactEmail.subject">
+      </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Hi Suki," [(ngModel)]="contactEmail.content"></textarea>
+    </mat-form-field>
+    <button type="button" mat-raised-button color="accent" (click)="sendEmail()">send</button>
+  </div>
+  <div class="sentMessage" *ngIf="shouldToggle">
+    <mat-icon>send</mat-icon>
+    <div>{{sentMessage}}</div>
+  </div>
+</mat-card>
+
+<mat-card class="contactFooter">
+    <i class="fa fa-map-pin fa-3x"></i>Austin, Texas
+</mat-card>
