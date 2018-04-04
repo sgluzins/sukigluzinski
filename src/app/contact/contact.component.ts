@@ -20,7 +20,8 @@ export class ContactComponent implements OnInit {
   @Input() shouldToggle = false;
   contactEmail = new Contact;
   email = new FormControl('', [Validators.required, Validators.email]);
-  sentMessage = `Thank you for your e-mail! I will be in touch.`;
+  thankYou = `Thank you for your e-mail!`;
+  messageSent = `I will be in touch as soon as possible.`;
 
   constructor(private contact:ContactService){
 
