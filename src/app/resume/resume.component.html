@@ -1,3 +1,10 @@
-<p>
-  resume works!
-</p>
+<mat-card *ngFor="let header of headers">
+  <mat-card-header>
+    {{header}}
+  </mat-card-header>
+  <mat-card-content>
+    <!-- <p>{{show.year}}</p>
+    <p>{{show.details}}</p>
+    <p>{{show.location}}</p> -->
+  </mat-card-content>
+</mat-card>

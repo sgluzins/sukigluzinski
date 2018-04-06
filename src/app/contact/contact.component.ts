@@ -12,7 +12,7 @@ import { Contact } from '../shared/models/contact.model';
     trigger('toggleState', [
       state('true', style({ opacity: '0', transform: 'rotateY( -180deg )'})),
       state('false', style({backgroundColor: 'white'})),
-      transition('* => *', animate('300ms'))
+      transition('* => *', animate('500ms'))
     ])
   ]
 })
