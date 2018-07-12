@@ -40,8 +40,6 @@ export class GalleryComponent implements OnInit {
       }
     });
     this.colNum = this.media.asObservable().map(change => {
-      console.log(change);
-      console.log(grid.get(change.mqAlias));
       if(grid.get(change.mqAlias) == 1){
         this.rowHeight = 50;
         this.width = 100;
